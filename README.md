@@ -33,4 +33,4 @@
 </HTML> 
 ```
 
-スタイルは，[デフォルトのフォント](https://support.microsoft.com/en-us/office/change-or-set-the-default-font-in-outlook-20f72414-2c42-4b53-9654-d07a92b9294a)が使用されます。
+スタイルは，[デフォルトのフォント](https://support.microsoft.com/en-us/office/change-or-set-the-default-font-in-outlook-20f72414-2c42-4b53-9654-d07a92b9294a)が使用されます。ただし，本文と段落にはスタイルが設定されていないため，本文に続けて入力したテキストはデフォルトのフォントではなく，Outlook既定の書式になってしまいます。
