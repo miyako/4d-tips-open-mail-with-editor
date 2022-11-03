@@ -15,7 +15,7 @@
 
 [Outlookのオートメーション](https://learn.microsoft.com/en-us/office/vba/api/overview/outlook)で新規メールを開いて編集することができます。
 
-本文を[`MailItem.Body`](https://learn.microsoft.com/en-us/office/vba/api/outlook.mailitem.body)にセットすると，Outlookが自動的にHTML本文を生成します。内容は
+本文を[`MailItem.Body`](https://learn.microsoft.com/en-us/office/vba/api/outlook.mailitem.body)にセットすると，Outlookが自動的にHTML本文を生成します。
 
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"> 
@@ -32,3 +32,5 @@
   </BODY> 
 </HTML> 
 ```
+
+スタイルは，[デフォルトのフォント](https://support.microsoft.com/en-us/office/change-or-set-the-default-font-in-outlook-20f72414-2c42-4b53-9654-d07a92b9294a)が使用されます。
