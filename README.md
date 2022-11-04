@@ -69,11 +69,9 @@ $VBA.openMailWithEditor($email)
 
 ## Mail AppleScript
 
-
+標準的なスクリプティングで新規メールをエディターで開くことができます。添付ファイルも追加できますが，HTML版の本文（初期のバージョンでは`html content`非公式プロパティ）はサポートされていません。
 
 #### TEST_spplescript
-
-標準的なスクリプティングで新規メールをエディターで開くことができます。添付ファイルも追加できますが，HTML版の本文（初期のバージョンでは`html content`非公式プロパティ）はサポートされていません。
 
 ```4d
 C_OBJECT($email)
