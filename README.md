@@ -39,4 +39,4 @@
 
 一旦，標準テキストで本文をセットした後，`MailItem.HTMLBody`を読み取った上でHTML版の本文をセットすることもできますが，`MailItem.HTMLBody`は保護されたプロパティであり，Outlookの標準セキュリティ設定ではスクリプティングで値を読み取ることが許可されていません。
 
-回避策として，`[objMail.GetInspector.WordEditor.Range.Font]`オブジェクトのプロパティを利用し，HTML版の本文をセットすることができます。
+回避策として，`objMail.GetInspector.WordEditor.Range.Font`オブジェクトのプロパティを利用し，HTML版の本文をセットすることができます。
