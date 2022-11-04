@@ -96,3 +96,12 @@ $SCPT:=cs.SCPT.new()
 
 $SCPT.openMailWithEditor($email)
 ```
+
+## まとめ
+$email.attachments.push(MAIL New attachment($path))
+
+||標準テキスト|HTML|添付ファイル|
+|:-:|:-:|:-:|:-:|
+|mailto|✭|||
+|VBA|✭|✭|✭|
+
