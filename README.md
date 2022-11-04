@@ -68,9 +68,13 @@ $VBA:=cs.VBA.new()
 $VBA.openMailWithEditor($email)
 ```
 
-## AppleScript
+## Mail AppleScript
+
+
 
 #### TEST_spplescript
+
+標準的なスクリプティングで新規メールをエディターで開くことができます。HTML版の本文（初期のバージョンでは`html content`）は公式サポートされていません。
 
 ```4d
 C_OBJECT($email)
