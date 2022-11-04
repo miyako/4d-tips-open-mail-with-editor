@@ -1,3 +1,7 @@
+![version](https://img.shields.io/badge/version-19%2B-5682DF)
+![platform](https://img.shields.io/static/v1?label=platform&message=win-64&color=blue)
+[![license](https://img.shields.io/github/license/miyako/4d-tips-open-mail-with-editor)](LICENSE)
+
 # 4d-tips-open-mail-with-editor
 メールクライアント（Outlook）で新規メールを開いて編集するには
 
