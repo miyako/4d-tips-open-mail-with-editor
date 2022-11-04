@@ -40,3 +40,26 @@
 一旦，標準テキストで本文をセットした後，`MailItem.HTMLBody`を読み取った上でHTML版の本文をセットすることもできますが，`MailItem.HTMLBody`は保護されたプロパティであり，Outlookの標準セキュリティ設定ではスクリプティングで値を読み取ることが許可されていません。
 
 回避策として，[`MailItem.GetInspector.WordEditor.Range.Font`](https://learn.microsoft.com/en-us/office/vba/api/excel.range.font)オブジェクトのプロパティを利用し，HTML版の本文をセットすることができます。
+
+#### TEST_vba
+
+```4d
+C_OBJECT($email)
+
+$email:=New object
+
+$email.subject:="テストメール"
+$email.textBody:="こんにちは"
+
+$email.to:=New collection
+$email.to.push(New object("name"; "わかんだちゃん"; "email"; "support@wakanda.io"))
+
+$path:=Get 4D folder(Current resources folder)+"wakhello2.png"
+
+$email.attachments:=New collection
+$email.attachments.push(MAIL New attachment($path))
+
+$VBA:=cs.VBA.new()
+
+$VBA.openMailWithEditor($email)
+```
