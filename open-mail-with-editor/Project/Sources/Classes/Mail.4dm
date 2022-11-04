@@ -1,4 +1,8 @@
+Class extends Script
+
 Class constructor
+	
+	Super:C1705()
 	
 Function openMailWithEditor($email : Object)
 	
@@ -24,5 +28,35 @@ Function openMailWithEditor($email : Object)
 		$emlFile.setText($mime; "us-ascii"; Document with LF:K24:22)
 		
 		OPEN URL:C673($emlFile.platformPath)
+		
+	End if 
+	
+Function _getaddresses($property : Variant)->$addresses : Collection
+	
+	C_COLLECTION:C1488($values)
+	
+	Case of 
+		: (Value type:C1509($property)=Is text:K8:3)
+			$values:=New collection:C1472($property)
+		: (Value type:C1509($property)=Is object:K8:27)
+			$values:=New collection:C1472($property)
+		: (Value type:C1509($property)=Is collection:K8:32)
+			$values:=$property
+	End case 
+	
+	$addresses:=New collection:C1472
+	
+	If ($values#Null:C1517)
+		
+		C_VARIANT:C1683($value)
+		
+		For each ($value; $values)
+			Case of 
+				: (Value type:C1509($value)=Is text:K8:3)
+					$addresses.push($value)
+				: (Value type:C1509($value)=Is object:K8:27)
+					$addresses.push($value.name+" "+"<"+$value.email+">")
+			End case 
+		End for each 
 		
 	End if 

@@ -1,40 +1,10 @@
-Class extends Script
+Class extends Mail
 
 Class constructor
 	
 	Super:C1705()
 	
 	This:C1470.vbsFolder:=Folder:C1567(Get 4D folder:C485(Current resources folder:K5:16); fk platform path:K87:2).folder("vbs")
-	
-Function _getaddresses($property : Variant)->$addresses : Collection
-	
-	C_COLLECTION:C1488($values)
-	
-	Case of 
-		: (Value type:C1509($property)=Is text:K8:3)
-			$values:=New collection:C1472($property)
-		: (Value type:C1509($property)=Is object:K8:27)
-			$values:=New collection:C1472($property)
-		: (Value type:C1509($property)=Is collection:K8:32)
-			$values:=$property
-	End case 
-	
-	$addresses:=New collection:C1472
-	
-	If ($values#Null:C1517)
-		
-		C_VARIANT:C1683($value)
-		
-		For each ($value; $values)
-			Case of 
-				: (Value type:C1509($value)=Is text:K8:3)
-					$addresses.push($value)
-				: (Value type:C1509($value)=Is object:K8:27)
-					$addresses.push($value.name+" "+"<"+$value.email+">")
-			End case 
-		End for each 
-		
-	End if 
 	
 Function openMailWithEditor($email : Object)
 	
