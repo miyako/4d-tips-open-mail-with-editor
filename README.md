@@ -67,3 +67,28 @@ $VBA:=cs.VBA.new()
 
 $VBA.openMailWithEditor($email)
 ```
+
+## AppleScript
+
+#### TEST_spplescript
+
+```4d
+C_OBJECT($email)
+
+$email:=New object
+
+$email.subject:="テストメール"
+$email.textBody:="こんにちは"
+
+$email.to:=New collection
+$email.to.push(New object("name"; "わかんだちゃん"; "email"; "support@wakanda.io"))
+
+$path:=Get 4D folder(Current resources folder)+"wakhello2.png"
+
+$email.attachments:=New collection
+$email.attachments.push(MAIL New attachment($path))
+
+$SCPT:=cs.SCPT.new()
+
+$SCPT.openMailWithEditor($email)
+```
