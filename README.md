@@ -97,6 +97,8 @@ $SCPT:=cs.SCPT.new()
 $SCPT.openMailWithEditor($email)
 ```
 
+**注記**: Outlook for Macも類似のオートメーションをサポートしています。
+
 ## まとめ
 
 ||標準テキスト|HTML|添付ファイル|注記|
